@@ -1,0 +1,10 @@
+Bootstrap: docker
+From: python:3.7
+
+%post
+	apt -y update
+	apt -y upgrade
+	pip install numpy scipy jupyterlab matplotlib pymc3
+
+%runscript
+	jupyter lab
